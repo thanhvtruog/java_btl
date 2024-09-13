@@ -1,0 +1,62 @@
+{
+  "applications": "*",
+  "changelogDate": "20240913144109",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "fresher",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "programmingLanguage",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "assignment1Score",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "assignment2Score",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "assignment3Score",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "finalScore",
+      "fieldType": "Float"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Fresher",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "center",
+      "otherEntityRelationshipName": "freshers",
+      "relationshipName": "center",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "freshers",
+      "ownerSide": false,
+      "relationshipName": "projects",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

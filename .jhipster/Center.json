@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "changelogDate": "20240913144110",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "center",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Center",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "fresher",
+      "otherEntityRelationshipName": "center",
+      "relationshipName": "freshers",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "center",
+      "relationshipName": "projects",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
